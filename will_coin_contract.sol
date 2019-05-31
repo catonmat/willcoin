@@ -1,10 +1,10 @@
 // pragma solidity ^0.4.24;
 
 // ----------------------------------------------------------------------------
-// 'GoodWillToken' token contract
+// 'Good Will Token' token contract
 //
 // Deployed to : 0x43BD7C3aB2526956c31e18e42d2C12E22dED6E04
-// Symbol      : GOODWILL
+// Symbol      : WILLY
 // Name        : Good Will Token
 // Total supply: 100000000
 // Decimals    : 18
@@ -113,11 +113,11 @@ contract GoodWillToken is ERC20Interface, Owned, SafeMath {
     // Constructor
     // ------------------------------------------------------------------------
     constructor() public {
-        symbol = "GOODWILL";
+        symbol = "WILLY";
         name = "Good Will Token";
         decimals = 18;
         _totalSupply = 100000000000000000000000000;
-        balances[0x5A86f0cafD4ef3ba4f0344C138afcC84bd1ED222] = _totalSupply;
+        balances[0x43BD7C3aB2526956c31e18e42d2C12E22dED6E04] = _totalSupply;
         emit Transfer(address(0), 0x43BD7C3aB2526956c31e18e42d2C12E22dED6E04, _totalSupply);
     }
 
@@ -182,7 +182,7 @@ contract GoodWillToken is ERC20Interface, Owned, SafeMath {
         emit Transfer(from, to, tokens);
         return true;
     }
-f
+
 
     // ------------------------------------------------------------------------
     // Returns the amount of tokens approved by the owner that can be
